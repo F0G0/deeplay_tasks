@@ -1,0 +1,10 @@
+[Unit]
+Description=java_rebooter
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=forked
+ExecStart=/bin/java -jar /home/Fogo/task/app.jar /home/Fogo/task/log.txt "Service is working!"
+Restart=on-failure
+RestartSec=30
